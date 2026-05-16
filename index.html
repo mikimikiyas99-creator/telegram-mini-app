@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Mini App</title>
+
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+
+  <style>
+    body{
+      font-family: Arial;
+      background:#17212b;
+      color:white;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      height:100vh;
+      flex-direction:column;
+    }
+
+    button{
+      padding:12px 20px;
+      border:none;
+      border-radius:10px;
+      background:#2ea6ff;
+      color:white;
+      font-size:18px;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Hello Muki 👋</h1>
+
+<button onclick="showMessage()">
+  Click Me
+</button>
+
+<script>
+  const tg = window.Telegram.WebApp;
+
+  tg.expand();
+
+  function showMessage(){
+    tg.showAlert("Mini App works!");
+  }
+</script>
+
+</body>
+</html>
